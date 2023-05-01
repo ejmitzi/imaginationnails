@@ -1,5 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@400;600;700;800;900&display=swap');
+
 body {
     margin: 0;
     height: 100vh;
     background-color: #F5F8F3;
+    display: grid;
+    grid-template-rows: 1.5fr 8fr 1fr;
+    font-family: 'Martel', serif;
+}
+
+header {
+    grid-row: 1/2;
+}
+
+nav {
+    background-color: #C4D1C9;
+}
+
+.nav-link {
+    color: #2F392B;
+}
+
+.nav-link:hover {
+    color: #606a5c;;
+}
+
+.nav-item {
+    background-color: #EEE3D8;
+    margin: 1%;
+    border-radius: 15px;
+    border: 2px solid #D9CCBF;
+    text-align: center;
+    width: 35%;
+    max-width: 200px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+#shopping-cart{ 
+    max-width: 25px;
+    fill: #2F392B
+}
+
+#logo-div {
+    width: 20%;
+    max-width: 125px;
+}
+
+#logo {
+    width: 100%;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler-icon:focus {
+    box-shadow: 0 0 3px #2F392B;
+}
+
+main {
+    grid-row: 2/3;
+}
+
+footer {
+    grid-row: 3/4;
+    background-color: #C4D1C9;
+}
+
+#instagram {
+    max-width: 35px;
+    fill: #2F392B;
+    margin: 22px;
+}
+
+#tiktok {
+    fill: #2F392B;
+    max-width: 25px;
 }
