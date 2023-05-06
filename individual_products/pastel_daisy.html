@@ -53,18 +53,24 @@
         <div class="product-name">
             <h2>Pastel Daisy Nails</h2>
         </div>
-        <div class="product-img-div">
-            <img class="individual-product-img" src="../images/pasteldaisy.png" alt="Image of hand with purple nails with daisies.">
+        <div id="product-area">
+            <div class="product-img-div">
+                <img class="individual-product-img" src="../images/pasteldaisy.png" alt="Image of hand with purple nails with daisies.">
+            </div>
+            <div id="product-stats">
+                <p class="price">$16.99</p>
+                <div id="review-area">
+                    <button href="#" class="review-button">Reviews</button>
+                    <a href="#" class="review-stars" aria-label="Reviews">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-        <p class="price">$16.99</p>
-        <a href="#" class="review-stars" aria-label="Reviews">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-        </a>
-        <button href="#" class="review-button">Reviews</button>
         <hr id="products-divider">
         <form class="purchase-form" method="post" action="#">
             <div class="form-content">
@@ -92,7 +98,15 @@
                     <label for="quantity">Quantity:</label>
                     <input type="number" id="quantity" name="quantity" min="1" max="10">
                 </div>
-            </div>  
+            </div>
+            <div id="notes-div">
+                <button class="btn btn-primary shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="true" aria-controls="collapseExample">
+                    Add custom order notes
+                </button>
+                    <div class="collapse show" id="collapseExample">
+                        <input type="text" id="order-notes" name="order-notes">
+                    </div>
+            </div> 
             <button type="submit" class="add-to-cart">Add to cart</button>  
         </form>
     </main>
