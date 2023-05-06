@@ -613,14 +613,13 @@ select:focus,
     align-items: center;
     margin: 2em;
     color: #2F392B;
-  };
+  }
   
   article {
     margin: auto;
     padding: 2em;
     display: flex;
     justify-content: center;
-  
   }
   
   .gina-img {
