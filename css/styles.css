@@ -24,6 +24,10 @@ header {
     width: 100%;
 }
 
+#logo-div a:focus { 
+  outline: 1px solid #2F392B;
+}     
+
 nav {
     background-color: #C4D1C9;
     position: relative;
@@ -34,7 +38,17 @@ nav {
 }
 
 .nav-link:hover {
-    color: #606a5c;
+    color:#2F392B;
+}
+
+.nav-link:focus {
+    outline: 1px solid #2F392B;
+    color: #2F392B;
+}
+
+.nav-link:active {
+    outline: none;
+    color: #2F392B;
 }
 
 .nav-item {
@@ -47,11 +61,13 @@ nav {
     max-width: 200px;
     font-size: 1rem;
     font-weight: 600;
-    transition: background-color 700ms;
+    transition: background-color 350ms;
+    transition: border 350ms;
 }
 
 .nav-item:hover {
-    background-color: #f2e7dd;
+    background-color: #ede5dc;
+    border: 2px solid #e6d9cd;
 }
 
 .navbar-toggler {
@@ -67,11 +83,20 @@ nav {
 #shopping-cart-sm {
     color: #2F392B;
     margin-right: 15px;
-    transition: color 400ms;
+    transition: color 350ms;
 }
 
 #shopping-cart-sm:hover {
     color: #51624a
+}
+
+#shopping-cart-sm:focus {
+    outline: 1px solid #2F392B;
+    color: #2F392B;
+}
+
+#shopping-cart-sm:active {
+  color: #2F392B
 }
 
 main {
@@ -85,14 +110,32 @@ footer {
 }
 
 #instagram {
-    max-width: 35px;
-    fill: #2F392B;
-    margin: 22px;
+    color: #2F392B;
+    align-self: center;
+    transition: color 350ms;
+}
+
+#instagram:hover {
+    color: #51624a
+}
+
+#instagram:focus {
+  outline: 1px solid #2F392B;
 }
 
 #tiktok {
-    fill: #2F392B;
-    max-width: 25px;
+    color: #2F392B;
+    align-self: center;
+    transition: color 350ms;
+    margin: 30px 20px 30px 25px;
+}
+
+#tiktok:hover {
+    color: #51624a;
+}
+
+#tiktok:focus {
+  outline: 1px solid #2F392B;
 }
 
 #about-us-container {
@@ -101,6 +144,148 @@ footer {
 
 #shopping-cart-lg {
     display: none;
+}
+
+/* HOME */
+
+.gallery {
+    max-width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    padding-bottom: 60px;
+  }
+
+  .gallery>div>img {
+    width: 280px;
+    height: 270px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    transition: all 0.2s;
+    z-index: 6;
+    outline-offset: 10px;
+  }
+
+  .gallery>div>img:hover {
+    outline: 5px solid #c4d1c9;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    transform: scale(1.0) translateY(-20px);
+    z-index: 20;
+  }
+
+  .gallery:hover .gallery>div>img:not(:hover) {
+    transform: scale(0.9);
+  }
+
+  .welcome {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    color: #2f392b;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-top: 20px;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    padding-bottom: 60px;
+  }
+  
+  .gallery>div>img {
+    width: 250px;
+    height: 230px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    transition: all 0.2s;
+    z-index: 6;
+    outline-offset: 10px;
+  }
+  
+  .gallery>div>img:hover {
+    outline: 5px solid #c4d1c9;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    transform: scale(1.0) translateY(-20px);
+    z-index: 20;
+  }
+  
+  .gallery:hover .gallery>div>img:not(:hover) {
+    transform: scale(0.9);
+  }
+  
+  .mission-container {
+    background-color: #EEE3D8;
+    border: 3px dotted #2F392B;
+    padding: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+/* CUSTOM NAILS */
+.form_container {
+    background-color: #C4D1C9;
+    border-radius: 10px;
+    padding: 20px 60px;
+    margin: 30px auto;
+    max-width: 400px;
+
+}
+  
+.custom-text,
+.custom-email,
+select,
+.custom-textarea {
+    width: 100%;
+    background-color: #F5F8F3;
+    border: 1px solid #2F392B;
+    border-radius: 4px;
+    outline: none;
+    transition: all 200ms;
+}
+
+#custom-nails {
+  font-size: 2rem;
+  font-weight: 600;
+}
+  
+.custom-text:focus,
+.custom-email:focus,
+select:focus,
+.custom-textarea:focus {
+    border: 2px solid #D9CCBF;
+}
+  
+#cn_submit {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    padding: 10px 50px 10px 50px;
+    width: 100%;
+    border-radius: 40px;
+    background-color: #2F392B;
+    color: #F5F8F3;
+    box-shadow: 2px 3px 5px #acb0ab;
+    border: none;
+    transition: all 350ms;
+}
+  
+#cn_submit:hover,
+#cn_submit:focus {
+    background-color: #51624a;
+    color: F5F8F3;
+}
+
+.custom-label {
+    padding-top: 15px;
 }
 
 /* INDIVIDUAL PRODUCT PAGES */
@@ -139,7 +324,7 @@ footer {
     padding: 15px 10px 0px 10px
 }
 
-.price {
+.cost {
     font-size: 1.7rem;
     font-weight: 600;
     color: #2F392B;
@@ -156,11 +341,15 @@ footer {
     color: #51624a
 }
 
+.review-stars:focus {
+  outline: 1px solid #2F392B;
+}
+
 .review-button {
     display: none;
 }
 
-hr {
+#products_divider {
     border-top: 2px solid #2F392B;
     width: 100%;
 }
@@ -185,13 +374,13 @@ hr {
     padding: 10px;
 }
 
-form label {
+.purchase-form label {
     font-size: 1.3rem;
     padding-right: 10px;
     color: #2F392B
 }
 
-form select {
+.purchase-form select {
     color: #2F392B;
     border-radius: 5px;
     border: 1px solid #2F392B;
@@ -199,7 +388,7 @@ form select {
     background-color: #F5F8F3
 }
 
-form input {
+.purchase-form input {
     color: #2F392B;
     border-radius: 5px;
     border: 1px solid #2F392B;
@@ -208,11 +397,11 @@ form input {
     background-color: #F5F8F3
 }
 
-form input:focus {
+.purchase-form input:focus {
     outline: 1.5px solid #2F392B;
 }
 
-form select:focus {
+.purchase-form select:focus {
     outline: 1.5px solid #2F392B;
 }
 
@@ -303,6 +492,14 @@ form select:focus {
     background-color: #EEE3D8;
 }
 
+#empty-cart a:focus {
+  outline: 1px solid #2F392B;
+}
+
+#continue-shopping:focus {
+  outline: 1px solid #2F392B;
+}
+
 #shopping-divider {
     width: 100%;
     margin-bottom: 50px;
@@ -325,7 +522,16 @@ form select:focus {
     width: 100%;
     border-top: 1px solid #2F392B;
     grid-row: 4/5;
+    grid-column: 1/3;
     margin-top: 0;
+}
+
+.price-value {
+    grid-column: 2/3;
+}
+
+.price-name {
+    grid-column: 1/2;
 }
 
 .bold {
@@ -354,6 +560,117 @@ form select:focus {
     background-color: #73877c
 }
 
+#checkout:focus {
+  outline: 2px solid #2F392B;
+}
+
+/* NAIL CARE */
+.nail_care_container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+.item {
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      margin: 30px 30px 0px 30px;
+      border: 2px dotted #2F392B;
+      border-width: 5px;
+      width: 100%;
+      font-size: 1.1rem;
+  }
+  
+#application{
+      background-color: #EEE3D8;
+      width: 100%;
+  }
+  
+#removal{
+      background-color: #C4D1C9;
+      width: 100%;
+      margin-bottom: 30px;
+  }
+  
+#plant1 {
+    transform: rotate(-330deg) scaleX(-1);
+    margin: 5px;
+    fill: #2F392B;
+  }
+  
+  
+#plant2 {
+    transform: rotate(-180deg) scaleX(-1);
+    margin: 5px;
+    fill: #2F392B;
+  }
+  
+/* ABOUT US */
+.about {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em;
+    color: #2F392B;
+  };
+  
+  article {
+    margin: auto;
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+  
+  }
+  
+  .gina-img {
+    width: 300px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .about-blurb p {
+    font-family: 'Martel,' serif;
+    font-size: small;
+    text-align: center;
+  }
+
+  .about-blurb {
+    margin-bottom: 30px;
+    margin-top: 40px;
+  }
+  
+  .mail-link {
+    color: #2F392B;
+    text-decoration: none;
+  }
+  
+  .mail-link:hover {
+    color: #2F392B;
+  }
+  
+  .contact-button {
+    background-color: transparent;
+    width: fit-content;
+    padding: 5px 20px 5px 20px;
+    align-items: center;
+    border-radius: 40px;
+    margin: auto;
+    margin-bottom: 40px;
+    border: 2px solid #D9CCBF;
+    color: #2F392B;
+    font-size: 1.3rem;
+    transition: background-color 350ms;
+    box-shadow: 2px 3px 5px #dee0dc;
+  }
+
+.contact-button:hover {
+    background-color: #EEE3D8;
+}
+
+.mail-link:focus {
+  outline: 1px solid #2F392B;
+}
+
 /* MEDIA QUERIES */
 
 @media only screen and (min-width: 992px) {
@@ -374,6 +691,15 @@ form select:focus {
     #shopping-cart-lg:hover {
         color: #51624a
     }
+
+    #shopping-cart-lg:focus {
+      outline: 1px solid #2F392B;
+      color: #2F392B;
+  }
+  
+  #shopping-cart-lg:active {
+    color: #2F392B
+  }
 
     #about-us-container {
         display: inline-block;
@@ -396,6 +722,14 @@ form select:focus {
         background-color: #d3e2d9;
     }
 
+    #about-us-container:focus {
+      outline: 1px solid #2F392B;
+    }
+
+    #about-us-button:focus {
+      outline: 1px solid #2F392B;
+    }
+
     .nav-item {
         background-color: transparent;
         margin: 0% 3% 0% 0%;
@@ -407,6 +741,11 @@ form select:focus {
 
     .nav-item:hover {
         background-color: transparent;
+        border: none;
+    }
+
+    .nav-link:hover {
+      color: #5c6857;
     }
 
     .navbar-nav {
@@ -414,7 +753,7 @@ form select:focus {
         border-radius: 10px 0 0 0;
         width: 100%;
         padding: 10px;
-        border: 1.5px dashed #2F392B;
+        border: 2.5px dotted #2F392B;
         border-bottom-style: none;
         border-right-style: none;
     }
@@ -503,6 +842,10 @@ form select:focus {
     background-color: #EEE3D8;
 }
 
+.review-button:focus {
+  outline: 1px solid #2F392B;
+}
+
 /* SHOPPING CART */
 
 #shopping-divider {
@@ -550,4 +893,369 @@ form select:focus {
     background-color: #73877c
 }
 
+/* ABOUt PAGE */
+
+.about {
+    padding: 0px 200px 0px 200px;
 }
+
+/* HOME */
+
+.mission-container {
+    margin: 0px 200px 20px 200px
+}
+
+/* NAIL CARE */
+.item {
+margin: 30px 200px 0px 200px; 
+}
+
+#application{
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+#removal{
+  padding-left: 200px;
+  padding-right: 200px;
+}
+}
+
+/* Sydney Reviews Page Start */
+/* review page title */
+
+#featured {
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 20px;
+    color: #2F392B;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+  
+  #line {
+    margin-bottom: 40px;
+  }
+  
+  /* review boxes grid setup */
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .box {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: white;
+    flex-basis: calc(50% - 10px);
+    border-style: solid;
+    width: 100%;
+  }
+  
+  .one {
+    grid-column: 1 / 4;
+  }
+  
+  .two {
+    grid-column: 1 / 4;
+  }
+  
+  .three {
+    grid-column: 1 / 4;
+  }
+  
+  .four {
+    grid-column: 1 / 4;
+  }
+  
+  .five {
+    grid-column: 1 / 4;
+  }
+  
+  .six {
+    grid-column: 1 / 4;
+  }
+  
+  /* review boxes content */
+  
+  #photo {
+    width: 200px;
+    max-height: 200px;
+    border-radius: 10px;
+  }
+  
+  .review-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .review-title {
+    flex-grow: 1;
+    padding: 5px;
+    font-size: 17px;
+    margin: 3px;
+  }
+  
+  .star-rating {
+    font-size: 20px;
+    color: #D3A13B;
+    margin-right: 4px;
+    margin-left: 8px;
+  }
+  
+  .star {
+    margin-right: 2px;
+    margin-left: 4px;
+  }
+  
+  .review-image {
+    flex-basis: 60%;
+    max-width: 300px;
+  }
+  
+  .review-text {
+    flex-basis: 50%;
+    padding-left: 15px;
+    font-size: 17px;
+    text-align: right;
+  }
+  
+  .text {
+    margin-top: 0;
+  }
+  
+  .hyperlink {
+    position: relative;
+    width: 100%;
+    text-align: right;
+  }
+  
+  .hyperlink span {
+    text-align: center;
+  }
+  
+  #etsy-link {
+    color: #2F392B;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  
+  #etsy-link:hover {
+    text-decoration: none;
+    color: #606a5c;
+  }
+
+  #etsy-link:focus {
+    outline: 1px solid #2F392B;
+  }
+
+  
+  /* review submission form */
+  
+  .submission {
+    height: 500px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  
+  #subheader {
+    padding-top: 25px;
+  }
+  
+  #subheader2 {
+    font-size: 20px;
+  }
+  
+  #reviews {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+  }
+
+  #reviews label {
+    margin-top: 15px;
+  }
+  
+  .rating {
+    display: flex;
+    text-align: center;
+    margin: 15px;
+    flex-direction: row-reverse;
+  }
+  
+  .rating label {
+    display: inline-block;
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+    margin-right: 10px;
+    text-align: center;
+  }
+  
+  .rating input {
+    display: none;
+  }
+  
+  .rating label:hover,
+  .rating label:hover~label,
+  .rating input:checked~label {
+    color: #D3A13B;
+  }
+  
+  #submission {
+    width: 250px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    background-color: transparent;
+    padding: 5px 20px 5px 20px;
+    border-radius: 40px;
+    color: #2F392B;
+    font-size: 1.2rem;
+    border: 2px solid #D9CCBF;
+    transition: background-color 350ms;
+  }
+
+  #sumbission:hover {
+    background-color: #EEE3D8;
+  } 
+
+  #sumbmission:focus {
+    outline: 1px solid #2F392B;
+  }
+
+  
+  #areatext {
+    width: 250px;
+    height: 100px;
+    resize: both;
+    max-width: 350px;
+    min-width: 250px;
+    max-height: 150px;
+    min-height: 30px;
+  }
+  
+  #submit {
+    width: 100px;
+    margin: 20px;
+  }
+  
+  /* Sydney Reviews Page End */
+  
+  /* Sydney Products Page Start */
+  
+  /* products page */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+  }
+  
+  .product {
+    background-color: #FBFAF8;
+    padding: 18px;
+    box-shadow: 0px 0px 8px #ddd;
+    transition: all 0.32s ease;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .product:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  .product img {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  .product h4 {
+    margin-top: 18px;
+    margin-bottom: 12px;
+    font-size: 18px;
+  }
+  
+  .product p {
+    color: #737373;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  .product-reviews {
+    position: relative;
+    bottom: 30px;
+    left: 0px;
+    font-size: 20px;
+    word-spacing: 6px;
+    color: black;
+    padding-top: 10px;
+  }
+
+  .product a {
+    text-decoration: none;
+  }
+
+  .product a:focus {
+    outline: 1px solid #2F392B;
+  }
+
+  .shop-now:focus {
+    outline: 1px solid #2F392B;
+  }
+  
+  .stars {
+    color: #D3A13B;
+    font-size: 14px;
+  }
+  
+  .shop-now {
+    position: relative;
+    bottom: 15px;
+    display: block;
+    color: #2F392B;
+    border-radius: 40px;
+    border: 2px solid #D9CCBF;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    width: fit-content;
+    margin: auto;
+    padding: 10px 20px 10px 20px;
+    transition: background-color 350ms;
+    box-shadow: 2px 3px 5px #e3e5e1
+  }
+
+  .shop-now:hover {
+    background-color: #EEE3D8;
+  }
+
+  .price {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 20px;
+  }
+  
+  @media screen and (min-width: 992px) {
+    .grid-container {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 15px;
+      padding: 15px;
+    }
+  }
+  /* Sydney Products Page End */
